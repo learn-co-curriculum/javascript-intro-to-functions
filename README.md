@@ -58,7 +58,7 @@ return your desired value:
 })
 ```
 
-Here's a simple example of a function that will will greet us good morning:
+Here's a simple example of a function that will greet us good morning:
 
 ```javascript
 function greet() {
@@ -66,14 +66,14 @@ function greet() {
 }
 ```
 
-To call a function, you type the functions name followed by a beginning parenthesis and followed by an ending parenthesis, followed by a semicolon:
+To call a function, you type the function's name followed by parentheses and a semicolon:
 
 ```javascript
 // Returns "Good morning you!"
 greet();
 ```
 
-If you try to call on a function using just its name, as you can in Ruby, the entire function will get returned back to you instead of the function's return value so be careful!
+If you try to call on a function using just its name, as you can in Ruby, the entire function will get returned back to you instead of the function's return value, so be careful!
 
 ```javascript
 // Returns [Function: greet]
@@ -131,8 +131,8 @@ Like in Ruby, you can add as many parameters to your JavaScript functions as you
 ## Function Expression
 
 There are two different ways to write functions in JavaScript. You can write
-them as a function **declaration** which is how we've been writing them, or as a
-function *expression**.
+them as a function **declaration**, which is how we've been writing them, or as a
+function **expression**.
 
 A function expression looks something like this:
 
@@ -150,9 +150,9 @@ greet("Grover", "afternoon");
 ```
 
 Function declarations are hoisted to the top of the current scope; function
-declarations are not.
+expressions are not.
 
-``` javascript
+```javascript
 
 // this works, even though we're calling
 // the function before the declaration —
@@ -177,11 +177,11 @@ var sayHello = function() {
 ```
 
 It's good to be familiar with both ways of writing a function for when you start
-working with other developers, or using Google resources for help.
+working with other developers (but remember that you can always Google resources for help).
 
 ## Default parameters
 
-Ruby has an idea of allowing you to pass optional arguments by defaulting
+Ruby allows you to pass optional arguments into a method with default
 argument values. To create a default argument, you add an equal sign where you
 define the variable name of your argument and set it equal to the value you want
 it to default to:
@@ -210,7 +210,7 @@ greet
 # => "Good morning you!"
 ```
 
-In JavaScript, you can make functions behave has though they have default
+In JavaScript, you can make functions behave as though they have default
 arguments. Here again is the simple greeting function:
 
 ```javascript
@@ -257,8 +257,8 @@ greet();
 
 Unlike Ruby, JavaScript doesn't force you to call a function with a set number
 of parameters. If a JavaScript function it defined to accept two parameters, and
-you call the function with only one parameter, the function will still run, but
-place `undefined` in the spot of the missing paramater:
+you call the function with only one parameter, the function will still run, placing
+`undefined` in the spot of the missing paramater:
 
 ```js
 function greet(name, timeOfDay) {
@@ -345,7 +345,7 @@ var num = 3.14159;
 num.toFixed(2);
 ```
 
-Let's incorporate the `.toFixed()` function to the second line of our new JavaScript function:
+Let's incorporate the `.toFixed()` function on the second line of our new JavaScript function:
 
 ```javascript
 function convertToMeters(feet) {
