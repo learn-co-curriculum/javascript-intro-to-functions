@@ -188,7 +188,7 @@ it to default to:
 
 ```ruby
 def greet(name="you")
-  "Good morning #{name}!";
+  "Good morning #{name}!"
 end
 ```
 
