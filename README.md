@@ -256,7 +256,7 @@ greet();
 ```
 
 Unlike Ruby, JavaScript doesn't force you to call a function with a set number
-of parameters. If a JavaScript function it defined to accept two parameters, and
+of parameters. If a JavaScript function is defined to accept two parameters, and
 you call the function with only one parameter, the function will still run, placing
 `undefined` in the spot of the missing paramater:
 
