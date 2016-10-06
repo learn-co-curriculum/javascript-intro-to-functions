@@ -28,8 +28,8 @@ of the function is always followed by `()` and then curly braces that begin and
 end the function.
 
 Further, the name of the function is not snake_cased, but rather
-lowerCamelCased. Snakecase is not used in JavaScript so leave your underscores
-at home people!
+lowerCamelCased. Snakecase is not used in JavaScript, so leave your underscores
+at home, people!
 
 One last important thing to note is that JavaScript functions will always return
 `undefined` unless you use the `return` keyword. In Ruby, writing `return` is
