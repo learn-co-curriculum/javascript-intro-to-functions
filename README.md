@@ -23,23 +23,14 @@ function nameOfFunction() {
 }
 ```
 
-Notice the `def` keyword has been replaced with the `function` keyword. The name
-of the function is always followed by `()` and then curly braces that begin and
-end the function.
+Notice the `def` keyword has been replaced with the `function` keyword. The name of the function is always followed by `()` and then curly braces that begin and end the function.
 
-Further, the name of the function is not snake_cased, but rather
-lowerCamelCased. Snakecase is not used in JavaScript so leave your underscores
-at home people!
+Further, the name of the function is not snake_cased, but rather lowerCamelCased. Snakecase is not used in JavaScript so leave your underscores at home people!
 
-One last important thing to note is that JavaScript functions will always return
-`undefined` unless you use the `return` keyword. In Ruby, writing `return` is
-optional because Ruby always returns the value of the last line of code
-evaluated. However, JavaScript has no implicit-return-value concept, so you must
-write `return` before the value you want to return.
+One last important thing to note is that JavaScript functions will always return `undefined` unless you use the `return` keyword. In Ruby, writing `return` is optional because Ruby always returns the value of the last line of code evaluated. However, JavaScript has no implicit-return-value concept, so you must write `return` before the value you want to return.
 
 **NOTE**: This isn't exactly true in [ECMAScript 6](http://es6-features.org/).
-For [arrow function](http://es6-features.org/#ExpressionBodies) expression
-bodies that are not wrapped in curly brackets, you can omit the return:
+For [arrow function](http://es6-features.org/#ExpressionBodies) expression bodies that are not wrapped in curly brackets, you can omit the return:
 
 ``` javascript
 [1, 2, 3, 4].filter(i => i % 2 === 0) // [2, 4]
