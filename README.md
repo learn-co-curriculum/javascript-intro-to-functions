@@ -279,7 +279,7 @@ in JavaScript. Their syntax should look familiar:
 
 ``` javascript
 function greet(name="Sue", timeOfDay="morning") {
-    return "Good " + timeOfDay + " " name + "!";
+    return "Good " + timeOfDay + " " + name + "!";
 }
 
 // 'Good morning, Sue!'
