@@ -279,7 +279,7 @@ in JavaScript. Their syntax should look familiar:
 
 ``` javascript
 function greet(name="Sue", timeOfDay="morning") {
-    return "Good " + timeOfDay + ", " name + "!";
+    return "Good " + timeOfDay + ", " + name + "!";
 }
 
 // 'Good morning, Sue!'
@@ -426,5 +426,3 @@ function convertToFahrenheit(celsius) {
 ```
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-functions.js' title='JavaScript Functions'>JavaScript Functions</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-intro-to-functions'>Functions in JS</a> on Learn.co and start learning to code for free.</p>
