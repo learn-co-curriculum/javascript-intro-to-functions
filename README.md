@@ -7,7 +7,6 @@ You're already very familiar with the idea of wrapping our code as methods in Ru
 + Write a function in JavaScript without parameters
 + Return a value from a function in JavaScript
 + Write a function with parameters
-+ Write a function with default parameters
 
 ## Function without parameters
 Here's the basic syntax for a function that doesn't take any parameters (you know them as arguments):
@@ -22,23 +21,7 @@ Notice the `def` keyword has been replaced with the `function` keyword. The name
 
 Further, the name of the function is not snake_cased, but rather lowerCamelCased. Snakecase is not used in JavaScript, so leave your underscores at home, people!
 
-One last important thing to note is that JavaScript functions will always return `undefined` unless you use the `return` keyword. In Ruby, writing `return` is optional because Ruby always returns the value of the last line of code evaluated. However, JavaScript has no implicit-return-value concept, so you must write `return` before the value you want to return.
-
-**NOTE**: This isn't exactly true in [ECMAScript 6](http://es6-features.org/). For [arrow function](http://es6-features.org/#ExpressionBodies) expression bodies that are not wrapped in curly brackets, you can omit the return:
-```js
-[1, 2, 3, 4].filter(i => i % 2 === 0) // [2, 4]
-```
-
-But if you wrap the function body in curly brackets, you must explicitly return your desired value:
-```js
-[1, 2, 3, 4].filter(i => { return i % 2 === 0 }) // [2, 4]
-
-// alternatively
-
-[1, 2, 3, 4].filter(i => {
-    return i % 2 === 0
-})
-```
+One last important thing to note is that JavaScript functions will always return `undefined` unless you use the `return` keyword. In Ruby, writing `return` is optional because Ruby always returns the value of the last line of code evaluated, but this is not the case for JavaScript.
 
 Here's a simple example of a function that will greet us good morning:
 ```js
