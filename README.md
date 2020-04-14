@@ -103,12 +103,23 @@ Be careful when calling functions with parameters. This could inadvertently mess
 ## Function Expression
 There are two different ways to write functions in JavaScript. You can write them as a function **declaration**, which is how we've been writing them, or as a function **expression**.
 
+While a function declaration looks like this:
+```js
+function greet(name, timeOfDay) {
+  return "Good "+ timeOfDay + " "+ name + "!";
+}
+```
+
 A function expression looks something like this:
 ```js
 var greet = function(name, timeOfDay){
   return "Good "+ timeOfDay + " "+ name + "!";
 };
 ```
+
+Here, the function is created and assigned to the variable `greet` explicitly, like any other value. No matter how the function is defined, it’s just a value stored in a variable called `greet`.
+
+The meaning of these code samples is the same: "create a function and put it into the variable `greet`".
 
 We can still call this function in the same way we would a function written with a function declaration:
 ```js
