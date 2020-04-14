@@ -88,6 +88,18 @@ greet("Jasmine", "night");
 
 Like in Ruby, you can add as many parameters to your JavaScript functions as you like. Or you can pass them none. Just depends on what task you're trying to accomplish.
 
+Unlike Ruby, JavaScript doesn't force you to call a function with a set number of parameters. If a JavaScript function is defined to accept two parameters, and you call the function with only one parameter, the function will still run, placing `undefined` in the spot of the missing paramater:
+```js
+function greet(name, timeOfDay) {
+  return "Good "+ timeOfDay + " "+ name + "!";
+}
+
+greet("joe");
+// returns "Good undefined joe!"
+```
+
+Be careful when calling functions with parameters. This could inadvertently mess up your return values.
+
 ## Function Expression
 There are two different ways to write functions in JavaScript. You can write them as a function **declaration**, which is how we've been writing them, or as a function **expression**.
 
@@ -130,75 +142,6 @@ var sayHello = function() {
 
 It's good to be familiar with both ways of writing a function for when you start working with other developers (but remember that you can always Google resources for help).
 
-## Default parameters
-Ruby allows you to pass optional arguments into a method with default argument values. To create a default argument, you add an equal sign where you define the variable name of your argument and set it equal to the value you want it to default to:
-```ruby
-def greet(name="you")
-  "Good morning #{name}!"
-end
-```
-
-This way, you can call on the method with the argument and it will set `name` to be the string you passed.
-
-Ruby:
-```ruby
-greet("Jasmine")
-# => "Good morning Jasmine!"
-```
-
-**or** you can call on the method without the argument and `name` will default to the string `"you"`:
-```ruby
-greet
-# => "Good morning you!"
-```
-
-In JavaScript, you can make functions behave as though they have default arguments. Here again is the simple greeting function:
-```js
-function greet(name) {
-  return "Good morning " + name + "!";
-}
-```
-
-To give the variable `name` a default value, you check to see if `name` has been defined on the first line of your function. To do this, you call JavaScript's `typeof` operator, which is a lot like calling `.class` in Ruby. If the function wasn't passed a parameter, then the variable will be `"undefined"`:
-```js
-function greet(name) {
-  if (typeof name === "undefined") {
-    // add code
-  }
-  return "Good morning " + name + "!";
-}
-```
-
-Inside the `if` statement, go ahead and set the default value you desire:
-```js
-function greet(name) {
-  if (typeof name === "undefined") {
-    name = "you";
-  }
-  return "Good morning " + name + "!";
-}
-```
-
-Let's now see our function in action:
-```js
-// Returns "Good morning Blake!"
-greet("Blake");
-
-// Returns "Good morning you!"
-greet();
-```
-
-Unlike Ruby, JavaScript doesn't force you to call a function with a set number of parameters. If a JavaScript function is defined to accept two parameters, and you call the function with only one parameter, the function will still run, placing `undefined` in the spot of the missing paramater:
-```js
-function greet(name, timeOfDay) {
-  return "Good "+ timeOfDay + " "+ name + "!";
-}
-
-greet("joe");
-// returns "Good undefined joe!"
-```
-
-Be careful when calling functions with parameters. This could inadvertently mess up your return values.
 
 ### **ES6 Note**
 ECMAScript 6 introduces [default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) in JavaScript. Their syntax should look familiar:
