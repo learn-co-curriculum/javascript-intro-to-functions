@@ -116,30 +116,6 @@ We can still call this function in the same way we would a function written with
 greet("Grover", "afternoon");
 ```
 
-Function declarations are hoisted to the top of the current scope; function expressions are not:
-```js
-// this works, even though we're calling
-// the function before the declaration —
-// the `sayGoodbye` function is *hoisted*
-// to the top of the current scope when
-// the script is evaluated
-sayGoodbye();
-
-function sayGoodbye() {
-    return 'Goodbye!';
-}
-
-
-// this does not work, as the function
-// is not hoisted in a function expression
-
-sayHello(); // TypeError: sayHello is not a function
-
-var sayHello = function() {
-    return 'Hello!';
-};
-```
-
 It's good to be familiar with both ways of writing a function for when you start working with other developers (but remember that you can always Google resources for help).
 
 
