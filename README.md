@@ -94,7 +94,7 @@ There are two different ways to write functions in JavaScript. You can write the
 
 A function expression looks something like this:
 ```js
-var greet = function(name, timeOfDay){
+const greet = function(name, timeOfDay){
   return "Good "+ timeOfDay + " "+ name + "!";
 };
 ```
@@ -124,7 +124,7 @@ function sayGoodbye() {
 
 sayHello(); // TypeError: sayHello is not a function
 
-var sayHello = function() {
+const sayHello = function() {
     return 'Hello!';
 };
 ```
@@ -243,7 +243,7 @@ function convertToMeters(feet) {
 The next step is to take the variable, `meters` and preempt it with the keyword `var` so that it's limited in its scope. We'll then end that line of code with a semicolon:
 ```js
 function convertToMeters(feet) {
-  var meters = feet / 3.2808;
+  let meters = feet / 3.2808;
   // add code
   // add code
 }
@@ -252,15 +252,15 @@ function convertToMeters(feet) {
 Just like we changed the `meters` variable from having a global scope to having a local scope, we'll do the same for the `rounded` variable:
 ```js
 function convertToMeters(feet) {
-  var meters = feet / 3.2808;
-  var rounded = // add code
+  let meters = feet / 3.2808;
+  let rounded = // add code
   // add code
 }
 ```
 
 To round a float in JavaScript, you call `.toFixed()` on the number. If you're operating on the literal number, remember to wrap it in parentheses, but since we're storing it in the variable `num`, we don't have to worry about that. You then pass `.toFixed()` a parameter, the number 2, meaning you would like two digits after the decimal:
 ```js
-var num = 3.14159;
+let num = 3.14159;
 
 // Returns the number 3.14
 num.toFixed(2);
@@ -269,8 +269,8 @@ num.toFixed(2);
 Let's incorporate the `.toFixed()` function on the second line of our new JavaScript function:
 ```js
 function convertToMeters(feet) {
-  var meters = feet / 3.2808;
-  var rounded = meters.toFixed(2);
+  let meters = feet / 3.2808;
+  let rounded = meters.toFixed(2);
   // add code
 }
 ```
@@ -278,8 +278,8 @@ function convertToMeters(feet) {
 Finally, let's concatenate our rounded meter value with the string " meters":
 ```js
 function convertToMeters(feet) {
-  var meters = feet / 3.2808;
-  var rounded = meters.toFixed(2);
+  let meters = feet / 3.2808;
+  let rounded = meters.toFixed(2);
   rounded + " meters";
 }
 ```
@@ -293,8 +293,8 @@ convertToMeters(16)
 Alright, so instead of getting our desired result of `"4.88 meters"`, we got `undefined`. As mentioned above, this is because JavaScript functions, unlike Ruby methods, will always return `undefined` unless you use the `return` keyword. Let's add that keyword to the left of the function's last line:
 ```js
 function convertToMeters(feet) {
-  var meters = feet / 3.2808;
-  var rounded = meters.toFixed(2);
+  let meters = feet / 3.2808;
+  let rounded = meters.toFixed(2);
   return rounded + " meters";
 }
 ```
@@ -331,7 +331,7 @@ Here's the JavaScript method that converts Celsius to Fahrenheit:
 ```js
 function convertToFahrenheit(celsius) {
   if (typeof(celsius) === "undefined") {
-    var celsius = 0;
+    let celsius = 0;
   }
   return (celsius *  9/5) + 32;
 }
